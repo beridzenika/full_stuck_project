@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f5f6f8;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.pageTitle {
+  margin-bottom: 30px;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.postCard {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px #0000000d;
+}
+
+.postHeader {
+  margin-bottom: 10px;
+}
+
+.postTitle {
+  margin: 0;
+}
+
+.postAuthor {
+  font-size: 14px;
+  color: #666;
+}
+
+.postText {
+  margin: 20px 0;
+}
