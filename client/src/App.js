@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import CreatePost from './pages/CreatePost';
 import Header from './components/Header';
+import Error404 from './pages/Error404';
+import Post from './pages/Post';
 
 function App() {
   return (
@@ -13,6 +15,9 @@ function App() {
         <Routes>
           <Route path="/" exact Component={Home} />
           <Route path="/createpost" exact Component={CreatePost} />
+          <Route path="/post/:id" exact Component={Post} />
+          
+          <Route path="*" exact Component={Error404} />
         </Routes>
       </main>
     </BrowserRouter>

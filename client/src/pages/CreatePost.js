@@ -1,6 +1,7 @@
-import { useEffect, } from "react";
+import { useNavigate } from "react-router-dom";
 
 function CreatePost() {
+  const navigate = useNavigate();
 
   const handleForm = (e) => {
     e.preventDefault();
@@ -12,7 +13,6 @@ function CreatePost() {
       postText: formData.get("postText"),
       username: formData.get("username")
     };
-    console.log(post);
 
     fetch("http://localhost:3001/posts", {
       method: "POST",
@@ -22,8 +22,8 @@ function CreatePost() {
       body: JSON.stringify(post)
     })
       .then((response) => response.json())
-      .then((data) => {
-        console.log("data sent", data);
+      .then(() => {
+        navigate("/");
       });
   };
 

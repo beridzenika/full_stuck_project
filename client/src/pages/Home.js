@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import PostCard from "../components/PostCard";
 
 function Home() {
@@ -18,7 +19,9 @@ function Home() {
 
       <section className="posts">
         {posts.map((post) => (
-          <PostCard post={post}></PostCard>
+          <Link to={`/post/${post.id}`} className="postLink" key={post.id}>
+            <PostCard post={post} />
+          </Link>
         ))}
       </section>
     </>

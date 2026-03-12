@@ -20,6 +20,10 @@ body {
   gap: 20px;
 }
 
+.postLink {
+  text-decoration: none;
+  color: inherit;
+}
 .postCard {
   background: white;
   border-radius: 10px;

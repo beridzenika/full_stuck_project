@@ -1,6 +1,6 @@
-function PostCard({ post }) {
+function PostCard({ post, onClick }) {
   return (
-    <article key={post.id} className="postCard">
+    <article key={post.id} onClick={onclick} className="postCard">
         <header className="postHeader">
             <h2 className="postTitle">{post.title}</h2>
             <span className="postAuthor">by {post.username}</span>
