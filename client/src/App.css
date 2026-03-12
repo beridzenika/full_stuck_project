@@ -43,3 +43,92 @@ body {
 .postText {
   margin: 20px 0;
 }
+
+.header {
+  align-items: center;
+  background-color: #222;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.logo-link {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.logo-text {
+  color: white;
+  padding-right: 10px;
+}
+.icon {
+  width: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+.nav-links a.active, .nav-links a:hover {
+  color: #61dafb;
+}
+
+.form-container {
+  width: 500px;
+  margin: 40px auto;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4da6ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2e8ae6;
+}

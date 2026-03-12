@@ -1,31 +1,21 @@
 import './App.css';
-import { useEffect, useState } from "react";
-import PostCard from './components/PostCard';
-
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './pages/Home';
+import CreatePost from './pages/CreatePost';
+import Header from './components/Header';
 
 function App() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3001/posts")
-      .then((response) => response.json())
-      .then((data) => {
-        setPosts(data);
-      });
-  }, []);
-
-  console.log(posts)
-
   return (
-    <main className="container">
-      <h1 className="pageTitle">Blog</h1>
-
-      <section className="posts">
-        {posts.map((post) => (
-          <PostCard post={post}></PostCard>
-        ))}
-      </section>
-    </main>
+    
+    <BrowserRouter>
+      <Header></Header>
+      <main className="container">
+        <Routes>
+          <Route path="/" exact Component={Home} />
+          <Route path="/createpost" exact Component={CreatePost} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 }
 
