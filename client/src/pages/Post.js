@@ -31,19 +31,29 @@ function Post() {
       });
   }
 
+  // title
+  useEffect(() => {
+    document.title = `Big Blog | ${post.title}`;
+  }, [post.title]);
 
+
+  if (!post) {
+    return <h2>Post not found (•́ ᴖ •̀)</h2>;
+  }
   return (
     <div>
         <h2>
             This is Post {id}
         </h2>
         <PostCard post={post}></PostCard>
-        <button onClick={() => {navigate(`/editpost/${id}`)}}>
-          Edit the Blog
-        </button>
-        <button onClick={handleDelete}>
-          Delete the Blog
-        </button>
+        <div className="postButtons">
+          <button onClick={() => {navigate(`/editpost/${id}`)}}>
+            Edit the Blog
+          </button>
+          <button onClick={handleDelete}>
+            Delete the Blog
+          </button>
+        </div>
     </div>
   );
 };

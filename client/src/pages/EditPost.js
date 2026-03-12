@@ -46,6 +46,15 @@ function EditPost() {
       });
   };
 
+  // title
+  useEffect(() => {
+    document.title = `Big Blog | Edit the Blog`;
+  }, []);
+
+
+  if (!post) {
+    return <h2>Post not found (•́ ᴖ •̀)</h2>;
+  }
   return (
     <div className="form-container">
       <h2>Blog {id}</h2>

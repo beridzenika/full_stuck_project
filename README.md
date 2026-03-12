@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# Full Stack Articles App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple full-stack web application where users can view, add, edit, and delete articles.
 
-## Available Scripts
+The project was built to practice modern web development using React for the frontend and Node.js with Express for the backend.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+* View articles
+* Add new articles
+* Edit existing articles
+* Delete articles
+* REST API backend
+* MySQL database
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Frontend
 
-### `npm test`
+* React
+* JavaScript
+* CSS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Backend
 
-### `npm run build`
+* Node.js
+* Express.js
+* Sequelize
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Database
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* MySQL
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
 
-### `npm run eject`
+/client → React frontend
+/server → Node.js backend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone the repository
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+git clone https://github.com/beridzenika/full_stuck_project.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Install dependencies
 
-## Learn More
+Frontend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+cd client
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Backend
 
-### Code Splitting
+cd server
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Database Setup
 
-### Analyzing the Bundle Size
+Create the database using the SQL file
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+mysql -u root -p < database.sql
 
-### Making a Progressive Web App
+Then configure your database credentials in the server.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Example configuration:
 
-### Advanced Configuration
+DB_HOST=localhost <br>
+DB_USER=root <br>
+DB_PASSWORD=password <br>
+DB_NAME=blog_db <br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The server models will define the table if necessary on it's own
 
-### Deployment
+## Running the Project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Start the backend server
 
-### `npm run build` fails to minify
+cd server
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Start the frontend
+
+cd client
+npm start
+
+The application will run on:
+
+Frontend
+http://localhost:3000
+
+Backend
+http://localhost:3001
+
+
+## API Endpoints
+
+GET /posts → get all articles <br>
+GET /posts/:id → get all articles <br>
+POST /posts → create article <br>
+PUT /posts/:id → update article <br>
+DELETE /posts/:id → delete article 
+
+## Future Improvements
+
+* Authentication
+* Comments
+* Pagination
+* Search functionality

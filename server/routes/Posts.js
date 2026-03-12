@@ -4,8 +4,9 @@ const { Posts } = require("../models");
 
 //GET
 router.get("/", async (req, res) => {
-    const listOfPosts = await Posts.findAll();
-
+    const listOfPosts = await Posts.findAll({
+        order: [["createdAt", "DESC"]] // show newest first
+    });
     res.json(listOfPosts);
 });
 

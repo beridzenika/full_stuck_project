@@ -1,6 +1,12 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function CreatePost() {
+  // title
+  useEffect(() => {
+      document.title = "Big Blog | Create Post";
+    }, []);
+
   const navigate = useNavigate();
 
   const handleForm = (e) => {

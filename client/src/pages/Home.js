@@ -5,6 +5,12 @@ import PostCard from "../components/PostCard";
 function Home() {
   const [posts, setPosts] = useState([]);
 
+  // title
+  useEffect(() => {
+    document.title = "Big Blog | Home Page";
+  }, []);
+
+  // GET
   useEffect(() => {
     fetch("http://localhost:3001/posts")
     .then((response) => response.json())

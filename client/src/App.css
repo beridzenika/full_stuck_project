@@ -47,6 +47,10 @@ body {
 .postText {
   margin: 20px 0;
 }
+.postButtons button {
+  padding: 10px 30px;
+  margin-right: 10px;
+}
 
 .header {
   align-items: center;
