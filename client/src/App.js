@@ -5,6 +5,7 @@ import CreatePost from './pages/CreatePost';
 import Header from './components/Header';
 import Error404 from './pages/Error404';
 import Post from './pages/Post';
+import EditPost from './pages/EditPost';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" exact Component={Home} />
           <Route path="/createpost" exact Component={CreatePost} />
           <Route path="/post/:id" exact Component={Post} />
+          <Route path="/editpost/:id" exact Component={EditPost} />
           
           <Route path="*" exact Component={Error404} />
         </Routes>

@@ -44,6 +44,6 @@ function CreatePost() {
       </form>
     </div>
   )
-}
+};
 
-export default CreatePost
+export default CreatePost;

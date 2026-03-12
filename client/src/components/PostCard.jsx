@@ -1,4 +1,4 @@
-function PostCard({ post, onClick }) {
+function PostCard({ post }) {
   return (
     <article key={post.id} onClick={onclick} className="postCard">
         <header className="postHeader">
